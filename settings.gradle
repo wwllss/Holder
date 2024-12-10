@@ -1,0 +1,1 @@
+include ':app', ':holder_api', ':holder_compiler', ':holder_annotation', ':appb', ':app_model', ':appc'

@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="zy.holder.appb">
+    <application>
+        <activity android:name=".AppBActivity"/>
+    </application>
+</manifest>
