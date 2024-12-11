@@ -61,7 +61,7 @@ class DefaultItemTypePool implements ItemTypePool {
                 return i + (linker == null ? 0 : linker.linkHolder(data, position));
             }
         }
-        throw new RuntimeException("error data ---> " + data.getClass().toString());
+        throw new RuntimeException("error data ---> " + data.getClass());
     }
 
     @SuppressWarnings("unchecked")

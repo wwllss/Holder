@@ -27,8 +27,7 @@ final class HolderUtils {
             if (CACHE_METHODS.get(clazz) != null) {
                 inflate = CACHE_METHODS.get(clazz);
             } else {
-                inflate = clazz.getMethod("inflate",
-                        LayoutInflater.class, ViewGroup.class, boolean.class);
+                inflate = clazz.getMethod("inflate", LayoutInflater.class, ViewGroup.class, boolean.class);
                 CACHE_METHODS.put(clazz, inflate);
             }
             return (ViewBinding) inflate.invoke(null, LayoutInflater.from(context), viewGroup, false);
@@ -65,8 +64,7 @@ final class HolderUtils {
                 return findBindingClass(((ParameterizedType) type).getRawType());
             }
             for (Type argument : arguments) {
-                if (argument instanceof Class
-                        && ViewBinding.class.isAssignableFrom((Class<?>) argument)) {
+                if (argument instanceof Class && ViewBinding.class.isAssignableFrom((Class<?>) argument)) {
                     CACHE.put(typeStr, (Class<? extends ViewBinding>) argument);
                     return (Class<? extends ViewBinding>) argument;
                 }
